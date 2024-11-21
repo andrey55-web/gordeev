@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Company</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container" style="display: flex; flex-direction: column">
+        <div class="head-cont">
+            <div class="head-left">
+                <img class="logo" src="img/logo.png" alt="logo">
+                <h2 class="head-h2">С помощью нас <br> вы сможете создать то, о чём</h2>
+                <h1 class="head-h1">желаете!</h1>
+                <p class="header-p">Наши возможности + опыт позволят Вам достичь<br>огромного успеха. Мы верим в вас! И знаем это на<br>все 100%. Вас не остановить!</p>
+                <input class="more-button" type="button" class="more-button" name="more-button" value="Узнать больше..." id="more" onclick="randomColor('more')">
+            </div>
+            <div class="img-div"><img class="big-img" src="img/header-img.png" alt="big-img" class="big-img" id="big-img" onclick="setInvisible('big-img')"></div>
+        </div>
+        <div class="middle" style="display: flex; flex-direction: column">
+            <div class="sm1">
+                <h2 class="middle-topic">Что Вам необходимо?</h2>
+            </div>
+            <div class="sm2">
+                <div class="block1">
+                    <img src="img/f3.png" alt="block1-img">
+                    <h3 >Первый блок</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur<br>adipisicing elit.</p>
+                </div>
+                <div class="block2">
+                    <img src="img/f4.png" alt="block2-img">
+                    <h3>Второй блок</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur<br>adipisicing elit?</p>
+                </div>
+                <div class="block3">
+                    <img src="img/f5.png" alt="block3-img">
+                    <h3>Третий блок</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur<br>adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <h2 class="bottom-h2">Форма заказа продукта или услуги</h2>
+            <form action="" novalidate>
+                Ваше ФИО<br>
+                <input type="text" placeholder="ФИО" id="fio" onchange="checkField('fio')"><br>
+                <p class="error"></p>              
+                <br>Ваш E-Mail<br>
+                <input type="text" class="email" id="email" placeholder="name@domain.tld" onchange="checkField('email')"><br>
+                <p class="error"></p>
+                <br>Ваш номер телефона<br>
+                <input type="tel" class="tel" id="tel" placeholder="81234567890" onchange="checkField('tel')"><br>
+                <p class="error"></p>
+                <br>Когда Вам удобно связаться?<br>
+                <input type="date" class="date" id="date" onchange="checkField('date')"><br>
+                <p class="error"></p>
+                <br>Выберите продукт/услугу<br>
+                <select name="products" id="products_list" class="products">
+                    <option value="Product 1">Продукт 1</option>
+                    <option value="Product 2">Продукт 2</option>
+                    <option value="Service 1">Услуга 1</option>
+                </select>
+                <br>
+                <input type="button" class="submit" value="Заказать продукт/услугу" onclick="output()">
+            </form>
+            <h2 class="bottom-h2">Форма заказа обратного звонка</h2>
+            <form action="">
+                <input type="text" name="name" id="1" placeholder="Имя" required maxlength=255 pattern="[A-Za-zА-Яа-я]*" title="Введите имя правильно.">
+                <br>
+                <input type="email" name="email" id="2" placeholder="Введите свой E-Mail" required pattern="[\w]+@[A-Za-z0-9]+.[a-z]{2,63}" title="name@domain.tld">
+                <br>
+                <input type="tel" name="tel" id="3" placeholder="Телефон" required pattern="[0-9]{11}" maxlength=11 title="Введите корректный номер телефона.">
+                <br>
+                <input type="text" name="topic" id="4" placeholder="Какая тема Вас интересует?" required maxlength=255>
+                <br>
+                <input class="submit" type="submit" value="Отправить вопрос!">
+            </form>
+        </div>
+        <div class="footer">
+            <h3>© Всё на этом сайте защищено</h3>
+        </div>
+    </div>
+    <script src="js/validation.js"></script>
+    <script src="js/elementControl.js"></script>
+</body>
+</html>
